@@ -1,12 +1,19 @@
 const loginForm   = document.querySelector("#login-form"); 
 const loginInput  = document.querySelector("#login-form input");
+const greeting          = document.querySelector("#greeting");
 
 function onLoginSubmit(e){
-      e.preventDefault(); // 어떤 이벤트의 기본 동작 등을 방지하는 것.
-      console.log(e);
+      e.preventDefault();
 
-      //const username = loginInput.value;
-      //console.log(username);
+      const HIDDEN_CLASSNAME = "hidden";
+
+      // 클래스제어
+      loginForm.classList.add(HIDDEN_CLASSNAME);
+      greeting.classList.remove(HIDDEN_CLASSNAME);
+      
+      const username =loginInput.value;
+      greeting.innerHTML = `Hello! ${username}<br/>Hi~`;
 }
+
 
 loginForm.addEventListener("submit",onLoginSubmit);
