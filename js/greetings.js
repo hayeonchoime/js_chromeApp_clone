@@ -20,8 +20,7 @@ function onLoginSubmit(e){
 
 // 화면 로드 시 제어
 function paintGreetings(username){
-      greeting.innerText = `Hello! ${username}
-      Hi~`;
+      greeting.innerText = `Hello! ${username}`;
       greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 const savedUsername = localStorage.getItem(USERNAME_KEY);

@@ -9,3 +9,4 @@ const bgImage = document.createElement("img");
 bgImage.src = `img/${choseImage}`;
 
 document.body.appendChild(bgImage);
+// prepend() // 가장위에 오게하는것
